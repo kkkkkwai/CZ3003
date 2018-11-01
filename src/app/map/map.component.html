@@ -1,0 +1,10 @@
+<div class="crisis-list">
+    <app-crisis-list [list]="crises" [selected]="selected"></app-crisis-list>
+</div>
+<div class="map" 
+    leaflet 
+    [leafletOptions]="options" 
+    [leafletLayersControl]="layersControl">
+    <!-- <app-crisis-layer></app-crisis-layer> -->
+</div>
+
