@@ -6,17 +6,14 @@ import { Crisis } from '../crisis';
   templateUrl: './crisis-list.component.html',
   styleUrls: ['./crisis-list.component.css']
 })
-export class CrisisListComponent implements OnInit, OnChanges {
+export class CrisisListComponent implements OnInit {
 
-  @Input() list:Crisis[];
+  @Input() checked:Crisis[];
   @Input() selected:Crisis;
 
   constructor() { }
 
   ngOnInit() {
-  }
-
-  ngOnChanges(){
   }
 
   onClick(crisis:Crisis){

@@ -8,6 +8,10 @@ import { MapComponent } from './map/map.component';
 import { CrisisLayerComponent } from './crisis-layer/crisis-layer.component';
 import { CrisisDetailComponent } from './crisis-detail/crisis-detail.component';
 import { CrisisListComponent } from './crisis-list/crisis-list.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatCardModule } from '@angular/material/card';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { CrisisListComponent } from './crisis-list/crisis-list.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LeafletModule.forRoot()
+    LeafletModule.forRoot(),
+    MatCheckboxModule,
+    MatCardModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

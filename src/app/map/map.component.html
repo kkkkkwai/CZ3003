@@ -1,10 +1,13 @@
 <div class="crisis-list">
-    <app-crisis-list [list]="crises" [selected]="selected"></app-crisis-list>
+    <app-crisis-list [selected]="selected" [checked]="checked"></app-crisis-list>
 </div>
 <div class="map" 
     leaflet 
     [leafletOptions]="options" 
-    [leafletLayersControl]="layersControl">
-    <!-- <app-crisis-layer></app-crisis-layer> -->
+    [leafletLayersControl]="layersControl"
+    (leafletClick)="mapClick()">
+    <app-crisis-layer [crises]="crises" [temps]="temps"
+        (selectEvent)="receiveSelect($event)"
+        (checkEvent)="receiveCheck($event)"></app-crisis-layer>
 </div>
 

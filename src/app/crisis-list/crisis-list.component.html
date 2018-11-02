@@ -3,7 +3,7 @@
 </div>
 <div>
   <ul>
-    <li *ngFor="let crisis of list" (click)="onClick(crisis)">
+    <li *ngFor="let crisis of checked" (click)="onClick(crisis)">
       <p>Summary: {{crisis.summary}}</p>
       <p>Address: {{crisis.address}}</p>
     </li>

@@ -1,1 +1,15 @@
-<div *ngFor="let layer of layers" [leafletLayer]="layer"></div>
+<div *ngFor="let layer of checked_layers" [leafletLayer]="layer.val"></div>
+<div class="card-content">
+    <mat-card-content>
+        <section class="layer-select">
+            <mat-checkbox *ngFor="let item of checked_names; let i = index"
+            [ngModel]="item[1]"
+            (ngModelChange)="onClickCheckbox(i)">{{item[0]}}</mat-checkbox>
+        </section>
+        <!-- <section>
+            <mat-checkbox [ngModel]="check_weather" (ngModelChange)="onClickTempCheckbox">Temperature</mat-checkbox>
+        </section> -->
+    </mat-card-content>
+</div>
+
+

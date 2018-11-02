@@ -19,6 +19,5 @@ export class CrisisDetailComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(){
-    console.log(this.crisis)
   }
 }
