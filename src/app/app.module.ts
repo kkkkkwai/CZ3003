@@ -12,6 +12,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     LeafletModule.forRoot(),
     MatCheckboxModule,
     MatCardModule,
+    MatButtonModule,
     FormsModule,
     HttpClientModule
   ],

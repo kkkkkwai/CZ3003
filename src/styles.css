@@ -9,3 +9,7 @@ html, body {
 .leaflet-control-layers {
     visibility: hidden;
 }
+
+* {
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+}

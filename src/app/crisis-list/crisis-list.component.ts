@@ -1,5 +1,7 @@
-import { Component, OnInit, Input, OnChanges } from '@angular/core';
-import { Crisis } from '../crisis';
+import { Component, OnInit, Input, OnChanges, EventEmitter, Output } from '@angular/core';
+import { Crisis } from '../data/crisis';
+import {MatCardModule} from '@angular/material/card';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-crisis-list',
@@ -10,6 +12,7 @@ export class CrisisListComponent implements OnInit {
 
   @Input() checked:Crisis[];
   @Input() selected:Crisis;
+  @Output() clicked: EventEmitter<Crisis> = new EventEmitter();
 
   constructor() { }
 
@@ -17,7 +20,7 @@ export class CrisisListComponent implements OnInit {
   }
 
   onClick(crisis:Crisis){
-    this.selected = crisis;
+    this.clicked.emit(crisis);
   }
 
 }

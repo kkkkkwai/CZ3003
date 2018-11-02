@@ -1,8 +1,8 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { CustomMarker } from '../map/custom-marker';
 import { DataService } from '../data.service';
-import { CrisisDetail } from '../crisis-detail';
-import { Crisis } from '../crisis';
+import { CrisisDetail } from '../data/crisis-detail';
+import { Crisis } from '../data/crisis';
 
 @Component({
   selector: 'app-crisis-detail',
